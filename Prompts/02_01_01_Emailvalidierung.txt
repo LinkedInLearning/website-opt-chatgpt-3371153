@@ -1,0 +1,25 @@
+========================= Prompt ==========================
+
+Wie kann ich eine Email in JavaScript validieren?
+
+==================== ChatGPT-Antwort ======================
+
+Um eine E-Mail-Adresse in JavaScript zu validieren, kannst du reguläre Ausdrücke (Regex) verwenden. Hier ist ein einfaches Beispiel, wie du das machen kannst:
+
+javascript
+Copy code
+function validateEmail(email) {
+  var regex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
+  return regex.test(email);
+}
+
+// Beispiel:
+console.log(validateEmail('test@example.com')); // Gibt true aus
+console.log(validateEmail('test@example')); // Gibt false aus
+In diesem Beispiel:
+
+^[a-zA-Z0-9._-]+ - Der Beginn der E-Mail muss aus einem oder mehreren alphanumerischen Zeichen (Groß- und Kleinbuchstaben), Punkten, Unterstrichen oder Bindestrichen bestehen.
+@ - Es folgt ein "@" Zeichen.
+[a-zA-Z0-9.-]+ - Danach folgt der Domainname, der aus einem oder mehreren alphanumerischen Zeichen, Punkten oder Bindestrichen bestehen muss.
+\.[a-zA-Z]{2,6}$ - Die E-Mail endet mit einem Punkt gefolgt von 2 bis 6 Buchstaben, was die Top-Level-Domain repräsentiert.
+Dieses Muster ist relativ einfach und funktioniert für viele gängige E-Mail-Adressen, aber es ist wichtig zu beachten, dass die Validierung von E-Mail-Adressen mit regulären Ausdrücken kompliziert sein kann, da es viele gültige Formate und Ausnahmen gibt. Für genauere Validierungsanforderungen könntest du komplexere Regeln oder Bibliotheken wie validator.js in Betracht ziehen, die eine umfassendere Prüfung bieten.

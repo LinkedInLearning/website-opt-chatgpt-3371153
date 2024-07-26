@@ -1,0 +1,1 @@
+Lassen Sie strukturierte Daten (Schema Markup) für die Seite / die Inhalte Ihrer Wahl generieren. Prüfen Sie die Richtigkeit anschließend mit dem Test für Rich-Suchergebnisse: https://search.google.com/test/rich-results

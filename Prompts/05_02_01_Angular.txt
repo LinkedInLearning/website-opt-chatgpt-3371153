@@ -1,0 +1,7 @@
+========================= Prompt ==========================
+
+Was ist die aktuellste Angular Version?
+
+==================== ChatGPT-Antwort ======================
+
+Die aktuellste Version von Angular ist Version 17.2 .

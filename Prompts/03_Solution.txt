@@ -1,0 +1,274 @@
+========================= Prompt ==========================
+
+Bitte erstelle Schema Markup "Ferienunterkünfte" für folgende Seite:
+
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Landon Hotel</title>
+  <link rel="stylesheet" href="css/style.css">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+</head>
+<body>
+  <header id="intro">
+    <article class="fullheight">
+      <div class="hgroup">
+        <h1>Landon Hotel</h1>
+        <h2>West London</h2>
+        <p><a href="#welcome"><img src="images/misc/arrow.png" alt="down arrow"></a></p>
+      </div>
+    </article>
+
+    <nav id="nav">
+      <div class="navbar">
+        <div class="brand"><a href="#welcome">Landon <span>Hotel</span></a></div>
+        <ul>
+          <li><a class="icon info" href="#hotelinfo"><span>Info</span></a></li>
+          <li><a class="icon rooms" href="#rooms"><span>Zimmer</span></a></li>
+          <li><a class="icon dining" href="#dining"><span>Gastro</span></a></li>
+          <li><a class="icon events" href="#events"><span>Veranstaltungen</span></a></li>
+          <li><a class="icon attractions" href="#attractions"><span>Attraktionen</span></a></li>
+        </ul>
+      </div><!-- navbar -->
+    </nav>
+  </header>
+<main id="wrapper">
+  <div class="scene" id="welcome">
+    <article class="content">
+      <div class="gallery">
+        <img src="images/hotel/intro_room.jpg" alt="Intro Gallery Room Sample Pictures">
+        <img src="images/hotel/intro_pool.jpg" alt="Intro Gallery Pool Sample Pictures">
+        <img src="images/hotel/intro_dining.jpg" alt="Intro Gallery Dining Sample Pictures">
+        <img src="images/hotel/intro_attractions.jpg" alt="Intro Gallery Attractions Sample Pictures">
+        <img class="hidesm" src="images/hotel/intro_wedding.jpg" alt="Intro Gallery Dining Sample Pictures">
+      </div>
+      <h1>Willkommen im Landon&nbsp;Hotel</h1>
+      <p>Das Original-Landon besteht seit 50 Jahren im Herzen von West London. Das West-End-Viertel bietet für jeden etwas &mdash; von Theater über Restaurants bis zu historischen Sehensw&uuml;rdigkeiten. Nicht verpassen sollten Sie das Dachterrassen-Café – ein wunderbarer Ort zum Trinken, Essen und Unterhalten, für Touristen und Einheimische.</p>
+    </article>
+  </div><!-- welcome -->
+  <div class="scene" id="hotelinfo">
+    <article class="heading">
+      <h1>N&uuml;tzliche Informationen</h1>
+    </article>
+    <article id="usefulinfo">
+      <section id="arrivalinfo">
+        <h2>Ihre Anreise</h2>
+        <ul>
+          <li><strong>Check-in:</strong> 15.00 Uhr</li>
+          <li><strong>Check-out:</strong> 11.00 Uhr</li>
+          <li><strong>Parken:</strong> Selbstparken in der Tiefgarage kostet £ 15 pro Tag, der Parkservice kostet £ 50 pro Tag.</li>
+          <li><strong>Flughafen-Shuttle:</strong> Unser kostenloser Flughafen-Shuttle f&auml;hrt st&uuml;ndlich zu den Flugh&auml;fen Heathrow und Gatwick.</li>
+          <li><strong>Bahnverkehr:</strong> Die n&auml;chste U-Bahn-Station ist Leicester Square.</li>
+          <li><strong>Haustiere:</strong> In den gesondert ausgezeichneten Haustier-Zimmern und Gemeinschaftsr&auml;umen sind alle Gr&ouml;&szlig;en und Arten von Haustieren willkommen. Assistenztiere sind &uuml;berall erlaubt.</li>
+        </ul>
+      </section>
+      <section class="checklist" id="services">
+        <h2>Services und Annehmlichkeiten</h2>
+        <p>Unsere Dienstleistungen und Annehmlichkeiten sind darauf ausgelegt, Ihnen die Reise zu erleichtern, Ihren Aufenthalt angenehm zu gestalten und Ihnen ein einzigartiges Erlebnis zu bieten. </p>
+        <ul>
+          <li>Hallenbad</li>
+          <li>24-Stunden-Fitness-Center</li>
+          <li>Massage</li>
+          <li>Wellnessbereich</li>
+          <li>Whirlpool in jedem Zimmer</li>
+          <li>Dachterrassen-Café &amp; Smoothie-Bar</li>
+          <li>Kaffeebar &amp; Konditorei</li>
+          <li>traditionelles kontinentales Frühstück</li>
+          <li>24-Stunden-Concierge-Service</li>
+          <li>Business-Center</li>
+          <li>kostenloses WLAN</li>
+          <li>W&auml;scherei &amp; Reinigungsservice</li>
+          <li>Tageszeitung</li>
+          <li>zertifiziertes "gr&uuml;nes" Hotel</li>
+          <li>haustierfreundliche Zimmer und Gemeinschaftsr&auml;ume</li>
+        </ul>
+      </section>
+      <section class="checklist" id="accessibility">
+        <h2>Barrierefreiheit</h2>
+        <p>Wir verpflichten uns, jeder Person die gleiche Servicequalität zu garantieren. Wir bieten die folgende Ausstattung f&uuml;r Menschen mit besonderen Bed&uuml;rfnissen:</p>
+        <ul>
+          <li>Haltegriffe an Dusch-/Wannenw&auml;nden</li>
+          <li>Duschsitze</li>
+          <li>Handbrause</li>
+          <li>h&ouml;here und verstellbare Toiletten</li>
+          <li>absenkbare Wasserh&auml;hne</li>
+          <li>mit Rollstuhl unterfahrbare Waschtische und Waschbecken</li>
+          <li>niedrigere Regalbretter im Kleiderschrank</li>
+          <li>Schreibtelefon f&uuml;r Geh&ouml;rlose</li>
+          <li>Lichtsignal bei Telefon und Rauchmelder</li>
+          <li>Telefonverst&auml;rker</li>
+          <li>Untertitel an den Fernsehger&auml;ten</li>
+          <li>Vibrationswecker</li>
+          <li>Telefon mit Lautst&auml;rkeregelung</li>
+        </ul>
+      </section>
+    </article>
+    <article id="greenprogram">
+      <h2>Landon Green Program</h2>
+      <p><strong>Das Landon Hotel in London</strong> wurde k&uuml;rzlich renoviert &mdash; unter der Ma&szlig;gabe, unseren Einfluss auf die Erde immer im Blick haben. Von umweltfreundlichen Baumaterialien &uuml;ber Solarenergie bis hin zu energiesparenden Leuchten und Ger&auml;ten im gesamten Hotel: An jeder Steckdose und jedem Schalter sparen wir Energie. Au&szlig;erdem haben wir mit einem Recycling- und Kompostierungsprogramm begonnen, das die Belastung lokaler Deponien reduziert und gleichzeitig wertvolle Rohstoffe zur Herstellung neuer Produkte oder im Falle von Kompost f&uuml;r den Einsatz in G&auml;rten und auf Feldern liefert.</p>
+    </article>
+  </div><!-- hotelinfo -->
+  <div class="scene" id="rooms">
+    <header>
+      <h1>Gästezimmer</h1>
+      <p>Unsere Zimmer sind mit schweren klassischen M&ouml;beln ausgestattet, die Londons reiche und alteingesessene royale Tradition symbolisieren. Und obwohl in klassischem Design gehalten, verf&uuml;gen unsere Zimmer &uuml;ber ein modernes Flair und bieten allen Komfort, den Sie in Luxushotels heute erwarten d&uuml;rfen. Wir haben unsere R&auml;ume nach namhaften &ouml;ffentlichen Pl&auml;tzen benannt, die am West End liegen.</p>
+    </header>
+    <article class="room fullheight" id="piccadilly">
+      <section class="content">
+        <h1>Piccadilly</h1>
+        <p>Als Economy-Zimmer eignet sich diese Kategorie f&uuml;r alle, die mehr Zeit damit verbringen wollen, Sehensw&uuml;rdigkeiten zu besuchen – und weniger Zeit damit, sich aufs Ohr zu legen. Das Piccadilly-Zimmer hat eine kleinere Grundfl&auml;che, aber alle Annehmlichkeiten der Deluxe-Zimmer. </p>
+      </section>
+    </article>
+    <article class="room fullheight" id="cambridge">
+      <section class="content">
+        <h1>Cambridge</h1>
+        <p>Das Zimmer verf&uuml;gt &uuml;ber ein Kingsize-Bett, das mit einer Comfort-Plus-Matratze und Bettw&auml;sche aus &auml;gyptischer Baumwolle mit 400er Fadendichte ausgestattet ist. Das Cambridge-Zimmer ist in geschmackvollen, warmen Farben gehalten, die Augen und Sinne beruhigen.</p>
+      </section>
+    </article>
+    <article class="room fullheight" id="westminster">
+      <section class="content">
+        <h1>Westminster</h1>
+        <p>Dieses Zimmer verf&uuml;gt wahlweise &uuml;ber ein Kingsize-Bett oder zwei Doppelbetten, die mit unserer Premiere-London-Bettw&auml;sche ausgestattet sind – der weichsten und luxuri&ouml;sesten W&auml;sche. </p>
+      </section>
+    </article>
+    <article class="room fullheight" id="oxford">
+      <section class="content">
+        <h1>Oxford</h1>
+        <p>Unsere Oxford-Suiten geh&ouml;ren zu den sch&ouml;nsten und romantischsten Zimmern der ganzen Umgebung und eignen sich perfekt f&uuml;r Flitterwochen. Sie verf&uuml;gen &uuml;ber Himmelbetten und viele Fenster – und ihnen mangelt es nicht an modernem Komfort und Gem&uuml;tlichkeit inklusive eines TLX-Media-Systems.</p>
+      </section>
+    </article>
+    <article class="room fullheight" id="victoria">
+      <section class="content">
+        <h1>Victoria</h1>
+        <p>Sie reisen mit der Familie? Unsere ger&auml;umigen Victoria-Suiten mit atemberaubender Aussicht auf die Stadt sind die perfekte Wahl f&uuml;r Sie. Diese Eckzimmer sind wahlweise mit Kingsize-Bett oder zwei Doppelbetten ausgestattet und verf&uuml;gen &uuml;ber ein Sofa mit einem bequemen Ausziehbett.</p>
+      </section>
+    </article>
+    <article class="room fullheight" id="manchester">
+      <section class="content">
+        <h1>Manchester</h1>
+        <p>Die Manchester-Executive-Suite erfreut sich gro&szlig;er Beliebtheit bei Gesch&auml;ftsreisenden aus aller Welt. Diese 2-Zimmer-Suiten verf&uuml;gen &uuml;ber ein Kingsize-Bett, ein Wohnzimmer mit Ledersessel, einen gro&szlig;en Schreibtisch und einen lederbezogenen Schreibtischstuhl.</p>
+      </section>
+    </article>
+  </div><!-- rooms -->
+  <div class="scene" id="dining">
+    <article id="areadining">
+      <h1>Gastronomie in der Umgebung des Hotels</h1>
+      <p>Das West End ist ein Paradies f&uuml;r Feinschmecker – und das Landon Hotel liegt mittendrin. Bei diesem Angebot traditionell englischer, italienischer, indischer, amerikanischer, chinesischer und franz&ouml;sischer K&uuml;che in direkter N&auml;he zum Hotel sowie einer Vielzahl leckerer kulinarischer K&ouml;stlichkeiten aus vielen anderen L&auml;ndern im Umkreis von weniger als einem Kilometer haben Sie nur ein einziges Problem: Sie m&uuml;ssen sich entscheiden.  </p>
+    </article>
+    <article id="inhotel">
+      <section id="rooftopcafe">
+        <h2>Dachterrassen-Caf&eacute;</h2>
+        <img src="images/hotel/dining_rooftop.jpg" alt="Dining">
+        <p>Unser Dachterrassen-Caf&eacute; ist die Adresse f&uuml;r Speisen auf F&uuml;nf-Sterne-Niveau. Unsere Meisterk&ouml;che sind f&uuml;r besondere Ern&auml;hrungsanspr&uuml;che geschult, wir bieten eine Reihe von vegetarischen oder veganen, koscheren, glutenfreien und milchfreien Produkten an. Ganz gleich, ob Sie Appetit auf unser preisgekr&ouml;ntes Roastbeef, knackige, erlesene Salate, appetitliche Vorspeisen oder k&ouml;stliche Desserts versp&uuml;ren: wir haben, was Sie w&uuml;nschen.</p>
+      </section>
+
+      <section id="smoothiebar">
+        <h2>Smoothie-Bar</h2>
+        <img src="images/hotel/dining_smoothiebar.jpg" alt="Dining">
+        <p>W&auml;hrend Sie auf das Essen warten, können Sie bei einem unserer vorz&ouml;glichen Smoothies auf der Dachterrasse den Panoramablick &uuml;ber die Stadt genie&szlig;en. Unsere herausragenden Barmixer erg&auml;nzen das Men&uuml; laufend um neue, einzigartige Smoothies. Mit einer gro&szlig;en Auswahl lokaler und frischer Obst- und Gem&uuml;sesorten k&ouml;nnen Sie die Mixgetr&auml;nke nach Ihrem Belieben verfeinern. Und dabei haben wir ein saisonales Angebot, das Sie nirgendwo sonst finden k&ouml;nnen.</p>
+      </section>
+
+      <section id="coffeebar">
+        <h2>Fr&uuml;hst&uuml;cks&amp; und Kaffeebar</h2>
+        <img src="images/hotel/dining_lattes.jpg" alt="Dining">
+        <p>Unsere traditionelle Fr&uuml;hst&uuml;cks&amp;  und Kaffeebar neben der Lounge ist der perfekte Start in den Morgen. Sie finden verschiedene saisonale, frische Fr&uuml;chte, mehrere M&uuml;sli-Sorten, Croissants, knuspriges Sauerteigbrot, auf Bestellung frisch zubereitete Eier und Omeletts, frischgepressten Saft, Kaffee und Tee. Das Frühstück wird täglich von 7 bis 10 Uhr serviert. Unsere Kaffeebar ist täglich bis 18.30 Uhr geöffnet.</p>
+      </section>
+    </article><!-- inhotel -->
+    <article id="roomservice">
+      <h1>Zimmerservice</h1>
+      <p>Wenn Sie lieber in Ihrem Zimmer bleiben und einen ruhigen Abend oder ein entspannendes Fr&uuml;hst&uuml;ck im Bett genie&szlig;en m&ouml;chten, k&ouml;nnen Sie unseren Zimmerservice in Anspruch nehmen.</p>
+    </article>
+  </div><!-- dining -->
+  <div class="scene" id="events">
+      <article class="event fullheight" id="businessmeetings">
+        <div class="content">
+          <h2>Gesch&auml;ftliche Treffen</h2>
+          <p>Unser Hotel verf&uuml;gt in jedem Aufenthaltsraum und G&auml;stezimmer &uuml;ber kabellosen Internetzugang, einschlie&szlig;lich des Essbereiches und der Lobby. Au&szlig;erdem haben wir einen topaktuellen Konferenzraum mit Videoprojektoren, hochaufl&ouml;senden Videoleinw&auml;nden und moderner Soundtechnologie.</p>
+        </div><!-- content -->
+      </article><!-- article -->
+      <article class="event fullheight" id="weddings">
+        <div class="content">
+          <h2>Hochzeiten &amp; gesellschaftliche Ereignisse</h2>
+          <p> Wenn Sie uns Ihre Hochzeit oder ein &auml;hnliches Ereignis anvertrauen, vertrauen Sie auf unseren hervorragenden Ruf – und den setzen wir nicht leichtfertig aufs Spiel. </p>
+        </div><!-- content -->
+      </article><!-- article -->
+  </div><!-- events -->
+  <div class="scene fullheight" id="attractions">
+    <article class="content">
+      <h1>Lokale Attraktionen</h1>
+        <p>Ganz gleich, ob Sie ein Freund des Theaters oder des ausgedehnten Shoppens sind oder ob Sie bummeln und Leute beobachten wollen, das Londoner West End hält unendlich viele M&ouml;glichkeiten bereit. Als Herz von Londons "Theaterland" bietet es die besten Theater-, Comedy- und Musical-Produktionen. </p>
+    </article>
+  </div><!-- attractions -->
+</main>
+<footer class="scene">
+  <article class="content">
+    <div id="socialmedia">
+      <ul class="group">
+        <li><a href="https://twitter.com"><img class="icon" src="images/socialmedia/twitter.png" alt="icon for twitter" /></a></li>
+        <li><a href="http://www.facebook.com"><img class="icon" src="images/socialmedia/facebook.png" alt="icon for facebook" /></a></li>
+        <li><a href="http://www.youtube.com"><img class="icon" src="images/socialmedia/youtube.png" alt="icon for youtube" /></a></li>    
+      </ul>      
+    </div>
+  </article>
+</footer>
+  <script src="js/script.js"></script>
+</body>
+</html>
+
+==================== ChatGPT-Antwort ======================
+
+Um für die Webseite des Landon Hotels ein Schema Markup für "Ferienunterkünfte" zu erstellen, können wir das Schema.org Vokabular verwenden. Dabei würde ich vorschlagen, das LodgingBusiness Schema zu nutzen, da es für Hotels und andere Unterkünfte konzipiert ist. Hier ist ein Beispiel, wie du das Schema in deinen HTML-Code integrieren kannst:
+
+html
+Copy code
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "LodgingBusiness",
+  "name": "Landon Hotel",
+  "description": "Das Original-Landon besteht seit 50 Jahren im Herzen von West London. Das West-End-Viertel bietet für jeden etwas — von Theater über Restaurants bis zu historischen Sehenswürdigkeiten.",
+  "url": "http://www.landonhotel.com",
+  "telephone": "+44 20 1234 5678",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "123 Kings Road",
+    "addressLocality": "London",
+    "postalCode": "W1D 4TP",
+    "addressCountry": "GB"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": "51.5074",
+    "longitude": "-0.1278"
+  },
+  "image": [
+    "http://www.landonhotel.com/images/hotel/intro_room.jpg",
+    "http://www.landonhotel.com/images/hotel/intro_pool.jpg",
+    "http://www.landonhotel.com/images/hotel/intro_dining.jpg"
+  ],
+  "checkinTime": "15:00:00",
+  "checkoutTime": "11:00:00",
+  "numberOfRooms": 120,
+  "amenities": ["Free WiFi", "Airport shuttle", "Pet friendly rooms", "24-hour fitness center", "Rooftop café", "Business center"],
+  "starRating": {
+    "@type": "Rating",
+    "ratingValue": "5"
+  },
+  "servesCuisine": ["English", "Italian", "Indian", "American", "Chinese", "French"],
+  "hasMenu": "http://www.landonhotel.com/menu",
+  "events": [
+    {
+      "@type": "Event",
+      "name": "Business Meetings",
+      "description": "Moderne Konferenzräume ausgestattet mit der neuesten Technologie."
+    },
+    {
+      "@type": "Event",
+      "name": "Weddings & Social Events",
+      "description": "Hochzeiten und gesellschaftliche Ereignisse in prachtvollem Ambiente."
+    }
+  ]
+}
+</script>
+Dieses JSON-LD-Skript gibt grundlegende Informationen über das Hotel an, einschließlich Adresse, Kontaktinformationen, geografischer Lage, Bildern und Dienstleistungen. Es bietet auch Details zu Zimmern, Bewertungen und Veranstaltungen. Du kannst dieses Skript innerhalb des <head> oder am Ende des <body> in der HTML-Seite einfügen. Bitte passe die tatsächlichen URLs und Daten an deine spezifischen Bedürfnisse an.

@@ -1,0 +1,44 @@
+========================= Prompt ==========================
+
+Optimiere folgende Methode:
+
+function getUserFullNames(users) {
+ var fullNames = [];
+ for (var i = 0; i < users.length; i++) {
+ 	var user = users[i];
+ 	var fullName = user.firstName + ' ' + user.lastName; 	
+	fullNames.push(fullName);
+ }
+ return fullNames;
+}
+var users = [ 
+{ firstName: 'John', lastName: 'Doe‘ },
+{ firstName: 'Jane', lastName: 'Doe' } ]; 
+
+console.log(getUserFullNames(users)); 
+
+==================== ChatGPT-Antwort ======================
+
+Die vorgeschlagene Methode kann auf verschiedene Weisen optimiert werden, um sie effizienter, sauberer und moderner zu gestalten. Hier sind einige Vorschläge, wie man die Methode verbessern könnte:
+
+Verwenden von ES6+ Funktionen: Moderne JavaScript-Versionen bieten effizientere und sauberere Möglichkeiten, mit Arrays zu arbeiten. Eine gute Option ist die Verwendung von map(), das perfekt für diese Art von Transformation ist.
+Verwendung von Template Literals: Statt die Strings mit dem + Operator zu verketten, können Template Literals verwendet werden, die das Einsetzen von Variablen in Strings vereinfachen und übersichtlicher machen.
+Fehlerkorrektur: Im ursprünglichen Beispiel gibt es einen kleinen Syntaxfehler im Array users. Das Anführungszeichen bei 'Doe' ist falsch.
+Hier ist, wie die verbesserte Version des Codes aussehen könnte:
+
+javascript
+Copy code
+function getUserFullNames(users) {
+  return users.map(user => `${user.firstName} ${user.lastName}`);
+}
+
+var users = [
+  { firstName: 'John', lastName: 'Doe' },
+  { firstName: 'Jane', lastName: 'Doe' }
+]; 
+
+console.log(getUserFullNames(users));
+Erklärungen:
+map(): Diese Methode erstellt ein neues Array mit den Ergebnissen der Aufrufung einer bereitgestellten Funktion für jedes Element im übergebenen Array. Hier wird sie verwendet, um das fullName für jeden Benutzer zu erstellen.
+Template Literals: Durch die Verwendung von `${user.firstName} ${user.lastName}` wird der Code lesbarer und es ist einfacher, die Struktur des resultierenden Strings zu erkennen.
+Diese Änderungen machen den Code nicht nur kürzer und moderner, sondern auch leichter zu verstehen und zu warten.

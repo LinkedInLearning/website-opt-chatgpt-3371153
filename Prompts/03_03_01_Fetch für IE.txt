@@ -1,0 +1,35 @@
+========================= Prompt ==========================
+
+Folgender Code funktioniert nicht in Internet Explorer:
+
+// Anschließend Fetch-API verwenden
+fetch('https://api.example.com/data')
+    .then(response => response.json())
+    .then(data => console.log(data))
+    .catch(error => console.error('Fehler beim Abrufen der Daten:', error));
+
+==================== ChatGPT-Antwort ======================
+
+Der Code, den du verwendest, basiert auf der Fetch-API, die in älteren Browsern wie Internet Explorer nicht unterstützt wird. Internet Explorer, insbesondere ältere Versionen bis einschließlich IE11, unterstützt viele moderne JavaScript-Funktionen und APIs nicht, einschließlich der Fetch-API.
+
+Um dieselbe Funktionalität in Internet Explorer zu erreichen, kannst du stattdessen die XMLHttpRequest-API verwenden, die in IE und anderen älteren Browsern unterstützt wird. Hier ist ein Beispiel, wie du den Code umschreiben könntest:
+
+javascript
+Copy code
+var xhr = new XMLHttpRequest();
+xhr.open('GET', 'https://api.example.com/data', true);
+
+xhr.onload = function () {
+    if (xhr.status >= 200 && xhr.status < 300) {
+        console.log(JSON.parse(xhr.responseText));
+    } else {
+        console.error('Fehler beim Abrufen der Daten:', xhr.statusText);
+    }
+};
+
+xhr.onerror = function () {
+    console.error('Netzwerkfehler');
+};
+
+xhr.send();
+Dieser Code verwendet XMLHttpRequest zum Senden einer GET-Anfrage an die gleiche URL wie zuvor. Die Ereignis-Handler onload und onerror behandeln Erfolg und Fehler ähnlich wie deine ursprüngliche Fetch-API-Implementierung.

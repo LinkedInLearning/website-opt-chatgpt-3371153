@@ -1,0 +1,52 @@
+========================= Prompt ==========================
+
+Wie kann ich prüfen, ob ein Element hidden ist? Ich habe eine Lösung in JQuery, ich brauche aber eine in JS:
+
+$(element).is(":visible"); 
+$(element).is(":hidden");
+
+==================== ChatGPT-Antwort ======================
+
+Um zu überprüfen, ob ein Element in reinem JavaScript (ohne jQuery) sichtbar oder verborgen ist, können Sie die CSS-Eigenschaften und die Struktur des DOM-Elements analysieren. Hier sind einige Methoden, wie Sie dies tun können:
+
+1. Überprüfung mit offsetParent
+Ein einfacher Weg, um zu prüfen, ob ein Element sichtbar ist, besteht darin, die offsetParent-Eigenschaft zu verwenden. Ein Element ist in der Regel verborgen, wenn offsetParent null ist.
+
+javascript
+Copy code
+function isHidden(element) {
+    return element.offsetParent === null;
+}
+2. Überprüfung mit getComputedStyle
+Eine detailliertere Überprüfung kann durchgeführt werden, indem Sie die CSS-Eigenschaften des Elements mit getComputedStyle abrufen. Ein Element kann als verborgen betrachtet werden, wenn display auf none gesetzt ist oder visibility auf hidden.
+
+javascript
+Copy code
+function isVisible(element) {
+    const style = window.getComputedStyle(element);
+    return style.display !== 'none' && style.visibility !== 'hidden';
+}
+3. Überprüfung der Breite und Höhe
+Manchmal kann ein Element als nicht sichtbar angesehen werden, wenn seine Breite und Höhe beide 0 sind.
+
+javascript
+Copy code
+function isVisibleBySize(element) {
+    const rect = element.getBoundingClientRect();
+    return rect.width > 0 && rect.height > 0;
+}
+Kombinierte Überprüfung
+Für eine umfassende Überprüfung können Sie mehrere dieser Methoden kombinieren, um sicherzustellen, dass das Element tatsächlich sichtbar ist.
+
+javascript
+Copy code
+function isTrulyVisible(element) {
+    const style = window.getComputedStyle(element);
+    const rect = element.getBoundingClientRect();
+
+    return element.offsetParent !== null &&
+           style.display !== 'none' &&
+           style.visibility !== 'hidden' &&
+           rect.width > 0 && rect.height > 0;
+}
+Diese Methoden sollten Ihnen helfen, die Sichtbarkeit eines Elements in reinem JavaScript zu überprüfen, ähnlich wie Sie es in jQuery mit .is(":visible") oder .is(":hidden") tun würden.

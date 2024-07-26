@@ -1,0 +1,26 @@
+========================= Prompt ==========================
+
+Bitte generiere eine sinnvolle robots.txt für https://www.landonhotel.com/. Die Regeln sollen förderlich für die SEO sein.
+
+==================== ChatGPT-Antwort ======================
+
+Eine sinnvolle robots.txt für die Website https://www.landonhotel.com/, die SEO-freundlich gestaltet ist, könnte wie folgt aussehen:
+
+plaintext
+Copy code
+User-agent: *
+Disallow: /tmp/
+Disallow: /cache/
+Disallow: /admin/
+Allow: /
+
+Sitemap: https://www.landonhotel.com/sitemap.xml
+Hier sind die Details zu den Regeln:
+
+**User-agent: * ** - Diese Zeile gibt an, dass die folgenden Regeln für alle Webcrawler gelten.
+Disallow: /tmp/ - Verhindert, dass Suchmaschinen temporäre Dateien und Verzeichnisse indizieren, die für Besucher der Website nicht relevant sind.
+Disallow: /cache/ - Schließt Caching-Verzeichnisse aus der Indizierung aus, um sicherzustellen, dass Suchmaschinen nur die aktuellen und relevanten Inhalte der Website anzeigen.
+Disallow: /admin/ - Verhindert, dass administrative Bereiche der Website durchsucht und indiziert werden, was aus Sicherheitsgründen wichtig ist.
+Allow: / - Erlaubt das Crawlen der restlichen Bereiche der Website, um sicherzustellen, dass Suchmaschinen auf alle öffentlichen Inhalte zugreifen können.
+Sitemap: https://www.landonhotel.com/sitemap.xml - Gibt den Pfad zur XML-Sitemap der Website an. Dies hilft Suchmaschinen dabei, alle Seiten der Website zu finden und effizient zu indizieren.
+Diese robots.txt hilft dabei, sicherzustellen, dass Suchmaschinen relevante Inhalte indizieren und dabei unwichtige oder sensitive Bereiche auslassen, was sowohl für die Nutzerfreundlichkeit als auch für die SEO-Leistung der Website vorteilhaft ist.

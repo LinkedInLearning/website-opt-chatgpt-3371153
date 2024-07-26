@@ -1,0 +1,68 @@
+
+========================= Prompt ==========================
+
+Schreibe ein Python-Skript, um alle Deadlinks auf der Seite https://koeln-plus.com/erlebenswertes/ zu identifizieren.
+
+==================== ChatGPT-Antwort ======================
+
+Um Deadlinks auf einer Webseite wie der von Ihnen angegebenen zu identifizieren, können wir ein Python-Skript schreiben, das die Links auf der Seite extrahiert und dann deren Status überprüft. Hier ist ein Beispiel für ein Python-Skript, das diese Aufgabe erfüllt. Dieses Skript verwendet die Bibliotheken requests und BeautifulSoup.
+
+python
+Copy code
+import requests
+from bs4 import BeautifulSoup
+
+def get_dead_links(url):
+    try:
+        # Anfrage an die URL senden
+        response = requests.get(url)
+        response.raise_for_status()  # Überprüfen, ob ein Fehler vorliegt
+
+        # HTML-Inhalt mit BeautifulSoup analysieren
+        soup = BeautifulSoup(response.text, 'html.parser')
+
+        # Alle Links extrahieren
+        links = [link.get('href') for link in soup.find_all('a') if link.get('href') is not None]
+
+        dead_links = []
+
+        for link in links:
+            try:
+                # Überprüfen, ob der Link auf eine interne oder externe Ressource verweist
+                if not link.startswith(('http://', 'https://')):
+                    # Behandle als relativen Link
+                    link = requests.compat.urljoin(url, link)
+
+                # Status des Links überprüfen
+                link_response = requests.head(link, allow_redirects=True)
+                if link_response.status_code >= 400:
+                    dead_links.append(link)
+            except requests.RequestException:
+                dead_links.append(link)
+
+        return dead_links
+
+    except requests.RequestException as e:
+        print(f"Error accessing {url}: {e}")
+        return []
+
+# URL der Webseite
+url = "https://koeln-plus.com/erlebenswertes/"
+
+# Deadlinks finden
+dead_links = get_dead_links(url)
+
+if dead_links:
+    print("Gefundene Deadlinks:")
+    for link in dead_links:
+        print(link)
+else:
+    print("Keine Deadlinks gefunden.")
+
+Funktionsweise des Skripts:
+Anforderung an die Webseite senden: Das Skript beginnt damit, eine HTTP-Anfrage an die gegebene URL zu senden.
+HTML-Inhalte analysieren: Mit BeautifulSoup wird das HTML-Dokument analysiert, um alle Links (<a href=...>) zu extrahieren.
+Überprüfung jedes Links: Für jeden gefundenen Link wird eine HEAD-Anfrage gesendet (um nur den Header ohne den vollständigen Inhalt zu erhalten), und es wird geprüft, ob der HTTP-Statuscode 400 oder höher ist, was auf einen Fehler (z.B. 404 Nicht gefunden) hinweist.
+Hinweis:
+Das Skript führt eine Netzwerkanalyse durch. Wenn viele Links vorhanden sind, könnte dies eine Weile dauern.
+Sie müssen die Bibliotheken requests und BeautifulSoup4 installieren, falls diese noch nicht installiert sind (pip install requests beautifulsoup4).

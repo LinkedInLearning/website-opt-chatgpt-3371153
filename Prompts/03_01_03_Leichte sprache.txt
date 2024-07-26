@@ -1,0 +1,47 @@
+========================= Prompt ==========================
+
+Bitte übersetze den nachstehenden Text in die Leichte Sprache:
+
+Steuern in Deutschland
+
+In Deutschland sind fast alle Personen sowie Unternehmen steuerpflichtig. Die erhobenen Steuern fließen in den Staatshaushalt, der damit öffentliche Einrichtungen und Dienstleistungen finanziert. Dazu zählen unter anderem der Bau und Unterhalt von Krankenhäusern, Schulen und Straßen sowie die Bezahlung von Polizei- und Feuerwehrpersonal. Außerdem unterstützt der Staat Menschen, die arbeitslos sind, durch verschiedene soziale Leistungen, die ebenfalls aus Steuermitteln finanziert werden.
+
+Steuerpflicht und Gesetzgebung
+
+Die Bestimmungen, wer steuerpflichtig ist und wie die Steuern erhoben werden, sind in den Steuergesetzen festgelegt. Diese Gesetze werden auf verschiedenen staatlichen Ebenen erlassen: Kommunalgesetze gelten in Gemeinden oder Städten, Landesgesetze in den Bundesländern und Bundesgesetze in ganz Deutschland.
+
+Arten von Steuern
+
+Ein wesentliches Element des deutschen Steuersystems ist die Einkommensteuer. Sie wird von Personen und Unternehmen auf das Einkommen bzw. den Gewinn erhoben. Die Höhe der Einkommensteuer ist progressiv gestaffelt: Höhere Einkommen unterliegen einem höheren Steuersatz, was eine größere Steuerlast bedeutet, während geringere Einkommen entsprechend weniger besteuert werden.
+
+Das zuständige Finanzamt berechnet auf Basis der jährlichen Einkommensteuererklärung die individuelle Steuerschuld. Nicht jeder ist jedoch verpflichtet, eine Einkommensteuererklärung abzugeben; hierüber informiert das jeweilige Finanzamt.
+
+Lohnsteuer
+
+Jeder Arbeitnehmer in Deutschland muss Lohnsteuer zahlen, die direkt vom Arbeitgeber an das Finanzamt abgeführt wird. Die Höhe der Lohnsteuer richtet sich nach der Steuerklasse des Arbeitnehmers, die wiederum von persönlichen Faktoren wie Familienstand und Kinderzahl abhängt. Zu viel gezahlte Lohnsteuer kann durch eine Einkommensteuererklärung vom Finanzamt zurückerstattet werden.
+
+Insgesamt trägt das Steuersystem in Deutschland dazu bei, dass der Staat seine Aufgaben erfüllen und soziale Gerechtigkeit fördern kann.
+
+==================== ChatGPT-Antwort ======================
+
+Hier ist die Übersetzung des Textes in Leichte Sprache:
+
+Steuern in Deutschland
+
+In Deutschland müssen fast alle Menschen und Firmen Steuern zahlen. Das Geld von den Steuern verwendet der Staat, um wichtige Dinge für alle zu bezahlen. Zum Beispiel baut und pflegt der Staat Krankenhäuser, Schulen und Straßen. Auch Polizisten und Feuerwehrleute bekommen ihr Gehalt davon. Und der Staat hilft Menschen, die keine Arbeit haben, mit Geld aus den Steuern.
+
+Wer muss Steuern zahlen?
+
+Es gibt Regeln, die sagen, wer Steuern zahlen muss und wie das geht. Diese Regeln stehen in den Steuergesetzen. Es gibt Gesetze für Städte oder Gemeinden, für Bundesländer und für ganz Deutschland.
+
+Verschiedene Arten von Steuern
+
+Eine wichtige Steuer ist die Einkommensteuer. Diese Steuer zahlen Menschen und Firmen auf das Geld, das sie verdienen. Wenn jemand mehr verdient, muss er auch mehr Steuern zahlen. Wenn jemand weniger verdient, zahlt er weniger Steuern.
+
+Das Finanzamt schaut jedes Jahr, wie viel Steuern jemand zahlen muss. Aber nicht jeder muss jedes Jahr eine Steuererklärung machen. Das Finanzamt sagt, wer das machen muss.
+
+Lohnsteuer
+
+Jeder, der in Deutschland arbeitet, zahlt Lohnsteuer. Diese Steuer zieht der Arbeitgeber direkt vom Gehalt ab und gibt das Geld an das Finanzamt. Wie viel Lohnsteuer jemand zahlen muss, hängt davon ab, ob er verheiratet ist oder Kinder hat. Manchmal zahlt man zu viel Lohnsteuer. Dann kann man das Geld vom Finanzamt zurückbekommen.
+
+Die Steuern helfen dem Staat, alles zu machen, was nötig ist. So sorgen die Steuern für Gerechtigkeit und Unterstützung für alle.

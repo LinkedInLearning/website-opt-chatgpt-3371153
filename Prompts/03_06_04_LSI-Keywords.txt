@@ -1,0 +1,19 @@
+========================= Prompt ==========================
+
+Bitte schreibe 10 LSI-Keywords für den Suchbegriff "Hotel in London".
+
+==================== ChatGPT-Antwort ======================
+
+LSI (Latent Semantic Indexing) Keywords sind Varianten und thematisch verwandte Begriffe, die dazu beitragen, den Kontext und die Relevanz eines Hauptkeywords zu verstärken. Für den Suchbegriff „Hotel in London“ könnten folgende LSI-Keywords nützlich sein:
+
+„Unterkunft in London“
+„London City Hotels“
+„Günstige Hotels London“
+„Luxushotels in London“
+„Übernachtung London Zentrum“
+„Boutique-Hotels London“
+„London Hotels in der Nähe von Sehenswürdigkeiten“
+„Hotelbuchung London“
+„Hotelbewertungen London“
+„5-Sterne-Hotels in London“
+Diese Keywords decken eine Reihe von möglichen Suchintentionen ab, von der Suche nach spezifischen Preiskategorien bis hin zu geografisch spezifischen Anfragen, und können helfen, die Sichtbarkeit in Suchmaschinen zu verbessern.

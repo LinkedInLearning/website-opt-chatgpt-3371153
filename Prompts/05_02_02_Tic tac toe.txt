@@ -1,0 +1,96 @@
+========================= Prompt ==========================
+
+Bitte generiere den gesamten Code für eine Seite mit dem Tic Tac Toe Spiel.
+
+==================== ChatGPT-Antwort ======================
+
+Hier ist ein einfaches Beispiel für eine Tic Tac Toe-Webseite, die mit HTML, CSS und JavaScript erstellt wird. Diese Webseite ermöglicht es zwei Spielern, das Spiel auf einer einzigen Seite zu spielen.
+
+HTML (index.html)
+html
+Copy code
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <title>Tic Tac Toe</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Tic Tac Toe</h1>
+    <div id="game-board">
+        <div class="cell" onclick="makeMove(this, 0)"></div>
+        <div class="cell" onclick="makeMove(this, 1)"></div>
+        <div class="cell" onclick="makeMove(this, 2)"></div>
+        <div class="cell" onclick="makeMove(this, 3)"></div>
+        <div class="cell" onclick="makeMove(this, 4)"></div>
+        <div class="cell" onclick="makeMove(this, 5)"></div>
+        <div class="cell" onclick="makeMove(this, 6)"></div>
+        <div class="cell" onclick="makeMove(this, 7)"></div>
+        <div class="cell" onclick="makeMove(this, 8)"></div>
+    </div>
+    <button onclick="resetGame()">Spiel zurücksetzen</button>
+    <script src="script.js"></script>
+</body>
+</html>
+CSS (styles.css)
+css
+Copy code
+#game-board {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    grid-gap: 10px;
+    margin: 20px auto;
+}
+.cell {
+    width: 100px;
+    height: 100px;
+    background-color: #f0f0f0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 46px;
+    cursor: pointer;
+}
+.cell.used {
+    pointer-events: none;
+}
+JavaScript (script.js)
+javascript
+Copy code
+const board = Array(9).fill(null);
+let currentPlayer = 'X';
+const winConditions = [
+    [0, 1, 2], [3, 4, 5], [6, 7, 8], // Horizontal
+    [0, 3, 6], [1, 4, 7], [2, 5, 8], // Vertical
+    [0, 4, 8], [2, 4, 6]             // Diagonal
+];
+
+function makeMove(cell, index) {
+    if (!board[index]) {
+        board[index] = currentPlayer;
+        cell.textContent = currentPlayer;
+        cell.classList.add('used');
+        if (checkWin()) {
+            alert(currentPlayer + ' hat gewonnen!');
+            return;
+        }
+        currentPlayer = currentPlayer === 'X' ? 'O' : 'X';
+    }
+}
+
+function checkWin() {
+    return winConditions.some(condition => {
+        return condition.every(index => board[index] === currentPlayer);
+    });
+}
+
+function resetGame() {
+    board.fill(null);
+    currentPlayer = 'X';
+    document.querySelectorAll('.cell').forEach(cell => {
+        cell.textContent = '';
+        cell.classList.remove('used');
+    });
+}
+Dieser Code bietet Ihnen ein grundlegendes Tic Tac Toe-Spiel auf einer Webseite. Sie können weitere Features wie einen Punktestand oder Verbesserungen am Design hinzufügen, um das Spiel interessanter zu gestalten.

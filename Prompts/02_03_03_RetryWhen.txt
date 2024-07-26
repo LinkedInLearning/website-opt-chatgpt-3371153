@@ -1,0 +1,59 @@
+========================= Prompt ==========================
+
+RetryWhen ist deprecated. Bitte schreibe folgenden Code um:
+
+import { throwError, timer } from 'rxjs';
+import { retryWhen, mergeMap, take } from 'rxjs/operators';
+
+// Simulation eines HTTP-Request, der möglicherweise fehlschlägt
+const request$ = throwError(() => new Error('Anfrage fehlgeschlagen'));
+
+// Observable, das retryWhen verwendet, um den Request bei Fehlern zu wiederholen
+request$.pipe(
+  retryWhen(errors =>
+    errors.pipe(
+      // Begrenze auf 3 Wiederholungsversuche
+      take(3),
+      // Verzögere jeden neuen Versuch um 1000 Millisekunden
+      mergeMap((error, index) => {
+        console.log(`Versuch ${index + 1}: ${error.message}`);
+        return timer(1000);
+      })
+    )
+  )
+).subscribe({
+  next: val => console.log(`Ergebnis: ${val}`),
+  error: err => console.log(`Endgültiger Fehler nach 3 Versuchen: ${err.message}`),
+  complete: () => console.log('Vorgang abgeschlossen')
+});
+
+==================== ChatGPT-Antwort ======================
+
+Um den Code umzuschreiben und die Verwendung von retryWhen zu ersetzen, können wir die retry-Operator in Kombination mit delayWhen verwenden, da retryWhen als veraltet (deprecated) gekennzeichnet ist. Hier ist eine Möglichkeit, wie der Code umgeschrieben werden kann:
+
+javascript
+Copy code
+import { throwError, timer } from 'rxjs';
+import { retry, delayWhen, scan } from 'rxjs/operators';
+
+// Simulation eines HTTP-Request, der möglicherweise fehlschlägt
+const request$ = throwError(() => new Error('Anfrage fehlgeschlagen'));
+
+// Observable, das `retry` und `delayWhen` verwendet, um den Request bei Fehlern zu wiederholen
+request$.pipe(
+  retry({
+    delay: (error, retryCount) => {
+      console.log(`Versuch ${retryCount}: ${error.message}`);
+      // Begrenze auf 3 Wiederholungsversuche und verzögere jeden neuen Versuch um 1000 Millisekunden
+      return retryCount >= 3 ? throwError(() => new Error('Maximale Versuchszahl erreicht')) : timer(1000);
+    }
+  })
+).subscribe({
+  next: val => console.log(`Ergebnis: ${val}`),
+  error: err => console.log(`Endgültiger Fehler nach 3 Versuchen: ${err.message}`),
+  complete: () => console.log('Vorgang abgeschlossen')
+});
+Änderungen:
+
+Der retry-Operator wird verwendet, um automatisch neu zu versuchen, wenn ein Fehler auftritt. Es akzeptiert ein Objekt mit der delay-Funktion, die bestimmt, wie lange gewartet wird, bevor ein erneuter Versuch unternommen wird, und ob ein Fehler geworfen wird, wenn eine maximale Anzahl von Versuchen erreicht ist.
+Die retry-Strategie verwendet die timer-Funktion zur Verzögerung, ähnlich wie zuvor mit mergeMap, aber in diesem Fall wird der Timer direkt im Kontext von retry gesteuert. Dies eliminiert die Notwendigkeit für mergeMap und take aus dem vorherigen Beispiel.

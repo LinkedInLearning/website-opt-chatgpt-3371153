@@ -1,0 +1,88 @@
+========================= Prompt ==========================
+
+Ich möchte auf meiner Seite das aktuelle Wetter in Graz anzeigen. Bis jetzt habe ich folgenden HTML-Code geschrieben:
+
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="wetter-in-graz.css" />
+    <title>Wetter in Graz</title>
+  </head>
+  <body>
+    <div id="weather-container">
+      <h1>Wetter in Graz</h1>
+      <div id="temperature"></div>
+      <div id="weather-description"></div>
+    </div>
+  </body>
+</html>
+
+
+Implementiere die fehlende Funktionalität in JS.
+
+==================== ChatGPT-Antwort ======================
+
+Um die aktuelle Wetterinformation für Graz auf deiner Webseite anzuzeigen, kannst du JavaScript verwenden, um Daten von einer Wetter-API abzurufen und sie dann auf deiner Webseite darzustellen. Hier ist ein einfaches Beispiel, wie du dies mit der OpenWeatherMap API umsetzen kannst. Zunächst musst du dich bei OpenWeatherMap anmelden, um einen kostenlosen API-Schlüssel zu erhalten.
+
+Sobald du deinen API-Schlüssel hast, kannst du folgenden JavaScript-Code verwenden:
+
+HTML-Code (du kannst deinen bestehenden Code verwenden):
+html
+Copy code
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="wetter-in-graz.css" />
+    <title>Wetter in Graz</title>
+    <script src="wetter.js"></script>
+</head>
+<body>
+    <div id="weather-container">
+        <h1>Wetter in Graz</h1>
+        <div id="temperature"></div>
+        <div id="weather-description"></div>
+    </div>
+</body>
+</html>
+JavaScript-Code (Speichere diesen Code in einer Datei namens wetter.js):
+javascript
+Copy code
+document.addEventListener('DOMContentLoaded', function() {
+    fetchWeather();
+});
+
+function fetchWeather() {
+    const apiKey = 'DEIN_API_SCHLUESSEL';
+    const url = `https://api.openweathermap.org/data/2.5/weather?q=Graz&appid=${apiKey}&lang=de&units=metric`;
+
+    fetch(url)
+    .then(response => {
+        if (!response.ok) {
+            throw new Error('Netzwerkantwort war nicht ok');
+        }
+        return response.json();
+    })
+    .then(data => {
+        displayWeather(data);
+    })
+    .catch(error => {
+        console.error('Fehler beim Abrufen der Wetterdaten:', error);
+    });
+}
+
+function displayWeather(data) {
+    const temperature = document.getElementById('temperature');
+    const description = document.getElementById('weather-description');
+
+    temperature.textContent = `Temperatur: ${data.main.temp}°C`;
+    description.textContent = `Wetterlage: ${data.weather[0].description}`;
+}
+Erklärung
+DOMContentLoaded: Dieses Event stellt sicher, dass das Skript ausgeführt wird, nachdem das gesamte HTML-Dokument geladen wurde.
+fetch: Dies wird verwendet, um die Wetterdaten von der OpenWeatherMap API abzurufen.
+API-URL: Diese URL enthält die Anfrageparameter, die Stadt (Graz), deinen API-Schlüssel, die Sprache (Deutsch) und das Einheitensystem (metrisch).
+Stelle sicher, dass du DEIN_API_SCHLUESSEL im Skript durch den tatsächlichen API-Schlüssel ersetzt, den du von OpenWeatherMap erhalten hast.
+
+Jetzt sollte dein Wetter-Widget funktionieren und das aktuelle Wetter in Graz anzeigen, sobald du deine Seite im Browser lädst.

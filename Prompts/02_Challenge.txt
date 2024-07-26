@@ -1,0 +1,16 @@
+document.execCommand(...) ist leider deprecated / veraltet: https://developer.mozilla.org/en-US/docs/Web/API/Document/execCommand
+Deswegen brauchen wir eine moderne Lösung, um den selektierten Text in die Zwischenablage kopieren zu können.
+Nachstehend ist die aktuelle Implementierung. Bitte aktualisieren Sie diese mit Hilfe von ChatGPT.
+
+ function copyText() {
+    var textArea = document.getElementById("textArea");
+    textArea.select();
+    try {
+      var successful = document.execCommand('copy');
+      var msg = successful ? 'successful' : 'unsuccessful';
+      console.log('Copying text command was ' + msg);
+    } catch (err) {
+      console.log('Oops, unable to copy');
+    }
+    window.getSelection().removeAllRanges();
+}

@@ -1,0 +1,43 @@
+========================= Prompt ==========================
+
+Bitte ersetzte deprecated Code in folgender Methode:
+
+function copyText() {
+  var textArea = document.getElementById("textArea");
+  textArea.select();
+  try {
+    var successful = document.execCommand('copy');
+    var msg = successful ? 'successful' : 'unsuccessful';
+    console.log('Copying text command was ' + msg);
+  } catch (err) {
+    console.log('Oops, unable to copy');
+  }
+  window.getSelection().removeAllRanges();
+}
+
+==================== ChatGPT-Antwort ======================
+
+Die Methode document.execCommand('copy') ist in modernen Web-APIs als veraltet (deprecated) gekennzeichnet. Stattdessen wird empfohlen, die Clipboard API zu verwenden, die eine modernere und versprechendere Methode zur Interaktion mit der Zwischenablage bietet. Hier ist, wie du die obige Methode unter Verwendung der Clipboard API neu schreiben kannst:
+
+javascript
+Copy code
+function copyText() {
+  var textArea = document.getElementById("textArea");
+
+  // Wählt den Text programmatisch aus
+  textArea.select();
+  textArea.setSelectionRange(0, 99999); // Für mobile Geräte
+
+  // Verwendet die Clipboard API, um den Text zu kopieren
+  navigator.clipboard.writeText(textArea.value).then(function() {
+    console.log('Copying text command was successful');
+  }, function(err) {
+    console.log('Oops, unable to copy', err);
+  });
+
+  // Entfernt die Textauswahl, falls gewünscht
+  window.getSelection().removeAllRanges();
+}
+In dieser überarbeiteten Methode nutzen wir navigator.clipboard.writeText(), um den Inhalt der Textarea direkt in die Zwischenablage zu schreiben. Dieser Ansatz funktioniert besser mit modernen Browsern und ist die bevorzugte Methode im Vergleich zu execCommand.
+
+Stelle sicher, dass die Website über eine sichere Verbindung (HTTPS) verfügt oder auf localhost gehostet wird, da die Clipboard API aus Sicherheitsgründen Einschränkungen unterliegt. Sie funktioniert nur in sicheren Kontexten.

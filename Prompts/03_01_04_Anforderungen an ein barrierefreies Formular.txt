@@ -1,0 +1,63 @@
+========================= Prompt ==========================
+
+Ist dieses Formular barrierefrei? Wenn nicht, wie kann ich es barrierefreier machen?
+
+```
+<h2>Kontaktformular</h2>
+<form action="submit.php" method="post">
+    <input type="text" name="name" placeholder="Name">
+    <input type="email" name="email" placeholder="E-Mail">
+    <input type="text" name="telefon" placeholder="Telefon">
+    <textarea name="nachricht" rows="4" cols="50" placeholder="Ihre Nachricht" required></textarea>
+    <button type="submit">Senden</button>
+</form>
+```
+
+==================== ChatGPT-Antwort ======================
+
+Das gegebene Kontaktformular ist in seiner Grundstruktur recht einfach, aber es gibt einige wichtige Aspekte, die verbessert werden könnten, um es barrierefreier zu machen. Hier sind ein paar Vorschläge:
+
+1. Label-Elemente hinzufügen
+Es ist wichtig, dass jedes Eingabefeld im Formular mit einem <label> Element gekennzeichnet wird. Das hilft Screenreadern, den Inhalt korrekt zu interpretieren und den Benutzern mitzuteilen, was in jedes Feld eingegeben werden soll.
+
+html
+Copy code
+<label for="name">Name:</label>
+<input type="text" id="name" name="name" placeholder="Name">
+
+<label for="email">E-Mail:</label>
+<input type="email" id="email" name="email" placeholder="E-Mail">
+
+<label for="telefon">Telefon:</label>
+<input type="text" id="telefon" name="telefon" placeholder="Telefon">
+
+<label for="nachricht">Ihre Nachricht:</label>
+<textarea id="nachricht" name="nachricht" rows="4" cols="50" placeholder="Ihre Nachricht" required></textarea>
+2. Alternative Textbeschreibungen für interaktive Elemente
+Stellen Sie sicher, dass alle interaktiven Elemente wie Buttons eine klare Beschreibung haben. Zum Beispiel kann dem Senden-Button ein aria-label hinzugefügt werden, das seine Funktion deutlich macht.
+
+html
+Copy code
+<button type="submit" aria-label="Formular senden">Senden</button>
+3. Fokus-Indikatoren gewährleisten
+CSS kann verwendet werden, um sicherzustellen, dass alle interaktiven Elemente (wie Eingabefelder und Buttons) deutliche Fokus-Indikatoren haben, damit Benutzer, die Tastaturnavigation verwenden, leicht erkennen können, welches Element gerade aktiv ist.
+
+css
+Copy code
+input, textarea, button {
+    outline: none; /* Entfernt den Standard-Browser-Fokusrahmen */
+    box-shadow: 0 0 3px #0078D7; /* Fügt einen blauen Leuchteffekt als Fokus-Indikator hinzu */
+}
+4. Formularvalidierung und Fehlermeldungen zugänglich machen
+Sorgen Sie dafür, dass Fehlermeldungen und Validierungsanweisungen klar sind und von Screenreadern gelesen werden können. Verwenden Sie aria-live Bereiche, um Feedback zu geben, wenn sich der Status der Validierung ändert, ohne die Seite neu zu laden.
+
+5. Sprachattribute verwenden
+Fügen Sie ein lang Attribut im <html> Tag hinzu, um die Sprache der Seite anzugeben, was für Screenreader wichtig ist.
+
+html
+Copy code
+<html lang="de">
+6. Responsive Design beachten
+Achten Sie darauf, dass das Formular auf verschiedenen Geräten gut nutzbar ist. Verwenden Sie responsive Webdesign-Techniken, um sicherzustellen, dass das Formular auf mobilen Geräten genauso zugänglich und nutzbar ist wie auf Desktop-Geräten.
+
+Durch die Implementierung dieser Änderungen können Sie die Zugänglichkeit Ihres Formulars erheblich verbessern und sicherstellen, dass es von einer breiteren Palette von Benutzern effektiv genutzt werden kann.
